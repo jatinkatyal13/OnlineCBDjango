@@ -1,0 +1,17 @@
+{% extends 'classroom/layouts/base.html' %}
+
+{% block content %}
+
+  <h1>Recommended Courses</h1>
+
+  <ul>
+    {% for course in recommended_courses %}
+      <li>
+        <a href="{% url 'get_course' course.id %}">
+          {{course}}
+        </a> 
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
