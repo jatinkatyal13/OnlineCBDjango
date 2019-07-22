@@ -5,6 +5,7 @@ class Course(models.Model):
   name = models.CharField(max_length = 256)
   price = models.FloatField()
   description = models.TextField()
+  recommended = models.BooleanField(default = False)
   instructor = models.ForeignKey('Instructor', on_delete = models.CASCADE)
   contents = models.ManyToManyField('Content')
 
@@ -30,3 +31,18 @@ class Instructor(models.Model):
 
   def __str__(self):
     return self.name
+
+class PDF(models.Model):
+  name = models.CharField(max_length = 256)
+  url = models.URLField()
+  content = models.OneToOneField('Content', on_delete = models.CASCADE)
+
+class YouTubeVideo(models.Model):
+  name = models.CharField(max_length = 256)
+  video_id = models.CharField(max_length = 16)
+  content = models.OneToOneField('Content', on_delete = models.CASCADE)
+
+class Image(models.Model):
+  name = models.CharField(max_length = 256)
+  url = models.URLField()
+  content = models.OneToOneField('Content', on_delete = models.CASCADE)

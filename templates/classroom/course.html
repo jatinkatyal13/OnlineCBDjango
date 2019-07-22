@@ -13,7 +13,11 @@
 
   <ul>
     {% for content in course.contents.all %}
-      <li>{{content.name}}</li>
+      <li>
+        <a href="{% url 'get_content' course.id content.id %}">
+          {{content.name}}
+        </a>
+      </li>
     {% endfor %}
   </ul>
 

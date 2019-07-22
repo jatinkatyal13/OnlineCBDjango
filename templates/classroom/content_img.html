@@ -1,0 +1,9 @@
+{% extends 'classroom/layouts/base.html' %}
+
+{% block content %}
+
+  <h1>{{ content.name }}</h1>
+
+  <img src="{{ content.image.url }}" alt="{{ content.name }}">
+
+{% endblock %}

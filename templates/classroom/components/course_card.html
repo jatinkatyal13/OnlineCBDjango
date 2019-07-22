@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{course.name}}</h5>
+    <p class="card-text">
+      {{course.description}}
+    </p>
+    <a href="{% url 'get_course' course.id %}" class="card-link">Buy Now</a>
+  </div>
+</div>

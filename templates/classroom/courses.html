@@ -2,10 +2,10 @@
 
 {% block content %}
 
-  <h1>Recommended Courses</h1>
+  <h1>All Courses</h1>
 
   <div class="row">
-    {% for course in recommended_courses %}
+    {% for course in courses %}
       <div class="col-sm-12 col-md-6 col-lg-4">
         {% include 'classroom/components/course_card.html' %}
       </div>
