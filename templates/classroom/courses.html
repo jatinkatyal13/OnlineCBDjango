@@ -4,6 +4,14 @@
 
   <h1>All Courses</h1>
 
+  <form>
+    <div class="form-group">
+      <label for="query">Search</label>
+      <input name="query" type="text" class="form-control" id="query" placeholder="Search for courses">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
   <div class="row">
     {% for course in courses %}
       <div class="col-sm-12 col-md-6 col-lg-4">
